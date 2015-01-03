@@ -51,3 +51,8 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#MVIM
+*.un
+*.un~
+
