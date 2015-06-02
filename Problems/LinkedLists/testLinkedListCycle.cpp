@@ -6,9 +6,8 @@ using namespace std;
 bool hasCycle(Node *head){
     Node *one = head;
     Node *two = head;
-    while (one != NULL && two != NULL){
+    while (two && two->Next() != NULL){
         one = one->Next();
-        if (two->Next() == NULL) return false;
         two = two->Next()->Next();
         if (one == two)
             return true;
@@ -30,8 +29,8 @@ int main(){
     fifth->SetNext(third);
 
     if(hasCycle(first)){
-        cout << "Text 1: Works!" << endl;
+        cout << "It cycles." << endl;
     } else {
-        cout << "Test 1: Doesn't Work" << endl;
+        cout << "It doesn't cycle." << endl;
     }
 }
